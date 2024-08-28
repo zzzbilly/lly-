@@ -26,7 +26,7 @@
                 .then(response => response.json())
                 .then(data => {
                     if (data.ok) {
-                        location.reload();
+                        location.href('p.html');
                     } else {
                         alert('Failed to send message: ' + data.description);
                     }
