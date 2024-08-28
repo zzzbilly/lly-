@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lly? NGL</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        function sendMessage() {
+            const botToken = '7222132738:AAFJpBPujvsCQdczbqnV-uAGvCEoakXMcVI'; // Ganti dengan token bot Anda
+            const chatId = '6029671401'; // Ganti dengan ID chat Anda atau chat grup
+            const message = document.getElementById('message').value;
+
+            if (!message) {
+                alert('Please enter a message!');
+                return;
+            }
+ // Format pesan dengan Markdown atau HTML
+            const formattedMessage = `
+             \`\`\` pesan baru >> ${message}\`\`\``;
+
+            const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(formattedMessage)}&parse_mode=MarkdownV2`;
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.ok) {
+                        location.reload();
+                    } else {
+                        alert('Failed to send message: ' + data.description);
+                    }
+                })
+                .catch(error => {
+                    alert('Error: ' + error);
+                });
+        }
+    </script>
+</head>
+<body>
+        <h1>Send Message to billy?</h1>
+        <p>Kirimkan aku pesan anonim!</p>
+            <div class="box">
+                <textarea type="text" id="message" placeholder="Enter your message here"></textarea>
+              </div>
+        <button onclick="sendMessage()">KIRIM</button>
+        <i class="fa fa-instagram" style="font-size:22px;"><a href="https://instagram.com/zzz_billy" target="_blank">@zzz_billy</a></i>
+        <footer>© Copyright zzz_billy</footer>
+</body>
+</html>
