@@ -26,7 +26,7 @@
                 .then(response => response.json())
                 .then(data => {
                     if (data.ok) {
-                        window.location.href = 'pesan/success.html';
+                        window.location.href = 'success.html';
                     } else {
                         alert('Failed to send message: ' + data.description);
                     }
