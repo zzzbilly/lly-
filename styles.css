@@ -45,6 +45,12 @@ a {
     text-align: center;
 }
 
+.back {
+    background-color: orange;
+    padding: 8px 10px 8px;
+    font-size: 17px;
+}
+
 button {
     margin: 0 auto;
     padding: 10px 20px;  
@@ -70,4 +76,9 @@ i {
 footer {
     margin-top: 50px;
     font-size: 15px;
+}
+
+img {
+    height: 260px;
+    width: 300px;
 }
